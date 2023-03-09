@@ -34,9 +34,17 @@ document.getElementById("bits").innerText = "Produce";
 }
 document.getElementById("bit").innerText = Math.floor(game.bits) + "/" + Math.floor(game.bitMax);
 document.getElementById("byte").innerText = Math.floor(game.bytes);
+document.getElementById("bps").innerText = game.bps.toFixed(1);
+document.getElementById("byps").innerText = game.byps.toFixed(1);
 document.getElementById("upg1").innerText = Math.floor(game.upgCosts[0]);
 document.getElementById("upg2").innerText = Math.floor(game.upgCosts[1]);
 document.getElementById("upg3").innerText = Math.floor(game.upgCosts[2]);
+document.getElementById("level1").innerText =game.upgLevels[0];
+document.getElementById("level2").innerText = game.upgLevels[1];
+document.getElementById("level3").innerText = game.upgLevels[2];
+document.getElementById("effect1").innerText =game.upgEffects[0].toFixed(1);
+document.getElementById("effect2").innerText = game.upgEffects[1].toFixed(1);
+document.getElementById("effect3").innerText = game.upgEffects[2].toFixed(1);
 },50)
 
 function produceBits(){
@@ -68,6 +76,8 @@ function buyUpg1(){
 	   game.bytes -= game.upgCosts[0];
 		game.bps *= 1.5;
 		game.upgCosts[0] *= 2;
+    game.upgEffects[0] *=1.5;
+    game.upgLevels[0]++;
 		
 	}
 }
@@ -77,6 +87,8 @@ function buyUpg2(){
 	   game.bytes -= game.upgCosts[1];
 		game.bitMax *= 1.5;
 		game.upgCosts[1] *= 1.5;
+    game.upgEffects[1] *=1.5;
+    game.upgLevels[1]++;
 		
 	}
 }
@@ -86,6 +98,8 @@ function buyUpg3(){
 	   game.bytes -= game.upgCosts[2];
 		game.byps *= 1.5;
 		game.upgCosts[2] *= 2;
+    game.upgEffects[2] *=1.5;
+    game.upgLevels[2]++;
 		
 	}
 }
