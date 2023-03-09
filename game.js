@@ -149,9 +149,15 @@ function resetGame(){
 	game.infinityPoints = 0;
 	game.produceBit= false;
         game.produceByte= false;
-        game.upgLevels= [0,0,0];
-        game.upgEffects= [1,1,1];
-        game.upgCosts= [2,2,8];
-   save();
+        game.upgLevels[0] = 0;
+	game.upgLevels[1] = 0;
+	game.upgLevels[2] = 0;
+        game.upgEffects[0] = 1;
+	game.upgEffects[1] = 1;
+	game.upgEffects[2] = 1;
+        game.upgCosts[0] = 2;
+	game.upgCosts[1] = 2;
+	game.upgCosts[2] = 8;
+        save();
   }
 }
