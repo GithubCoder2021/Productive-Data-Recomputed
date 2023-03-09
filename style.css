@@ -13,9 +13,12 @@ button{
   font-family: monospace;
 }
 .upgrades{
- background-color: black;
+  background-color: black;
   color: #00FB20;
   border: 1px solid #00FB20;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
 }
 .upgrade{
  background-color: black;
