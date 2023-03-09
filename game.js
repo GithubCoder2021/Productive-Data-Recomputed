@@ -103,3 +103,55 @@ function buyUpg3(){
 		
 	}
 }
+
+
+function loadGame(){
+var savegame = JSON.parse(localStorage.getItem("data"))
+if (savegame !== null) {
+  game = savegame;
+}
+
+if (typeof savegame.bits !== "undefined") game.bits = savegame.bits;
+
+if (typeof savegame.bytes !== "undefined") game.bytes = savegame.bytes;
+
+if (typeof savegame.bps !== "undefined") game.bps = savegame.bps;
+
+if (typeof savegame.byps !== "undefined") game.byps = savegame.byps;
+
+if (typeof savegame.bitMax !== "undefined") game.bitMax = savegame.bitMax;
+if (typeof savegame.game.upgLevels[0] !== "undefined") game.upgLevels[0] = savegame.game.upgLevels[0];
+if (typeof savegame.game.upgLevels[1] !== "undefined") game.upgLevels[1] = savegame.game.upgLevels[1];
+if (typeof savegame.game.upgLevels[2] !== "undefined") game.upgLevels[2] = savegame.game.upgLevels[2];
+if (typeof savegame.game.upgEffects[0] !== "undefined") game.upgEffects[0] = savegame.game.upgEffects[0];
+if (typeof savegame.game.upgEffects[1] !== "undefined") game.upgEffects[1] = savegame.game.upgEffects[1];
+if (typeof savegame.game.upgEffects[2] !== "undefined") game.upgEffects[2] = savegame.game.upgEffects[2];
+if (typeof savegame.game.upgCosts[0] !== "undefined") game.upgCosts[0] = savegame.game.upgCosts[0];
+if (typeof savegame.game.upgCosts[1] !== "undefined") game.upgCosts[1] = savegame.game.upgCosts[1];
+if (typeof savegame.game.upgCosts[2] !== "undefined") game.upgCosts[2] = savegame.game.upgCosts[2];
+
+function save() { 
+  localStorage.setItem("data", JSON.stringify(game));
+}
+	
+loadGame();
+	
+	
+function resetGame(){
+ restart =confirm("Are you sure? Your data (if you have any) will be lost! This cannot be undone!");
+ if (restart == true) {
+	game.bits = 0;
+	game.bytes = 0;
+	game.bps = 0;
+	game.byps = 0;
+	game.bitMax = 32;
+	game.divisionCost = 5;
+	game.infinityPoints = 0;
+	game.produceBit: false;
+        game.produceByte: false;
+        game.upgLevels: [0,0,0];
+        game.upgEffects: [1,1,1];
+        game.upgCosts= [2,2,8];
+   save();
+  }
+}
