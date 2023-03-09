@@ -144,8 +144,8 @@ function resetGame(){
  if (restart == true) {
 	game.bits = 0;
 	game.bytes = 0;
-	game.bps = 0;
-	game.byps = 0;
+	game.bps = 1;
+	game.byps = 0.5;
 	game.bitMax = 32;
 	game.divisionCost = 5;
 	game.infinityPoints = 0;
