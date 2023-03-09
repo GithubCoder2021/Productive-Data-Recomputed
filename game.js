@@ -17,7 +17,7 @@ if (game.produceBit == true){
 }
 if (game.produceByte == true){
   if (game.bits > 0){
-  game.bits -= (game.byps*8)/20
+  game.bits -= (game.byps*8)/20;
   game.bytes += game.byps/20;
  }else {
   game.produceByte = false;
@@ -45,7 +45,7 @@ document.getElementById("level3").innerText = game.upgLevels[2];
 document.getElementById("effect1").innerText =game.upgEffects[0].toFixed(1);
 document.getElementById("effect2").innerText = game.upgEffects[1].toFixed(1);
 document.getElementById("effect3").innerText = game.upgEffects[2].toFixed(1);
-},50)
+},50);
 
 function produceBits(){
  if (game.produceBit == false){
@@ -106,7 +106,7 @@ function buyUpg3(){
 
 
 function loadGame(){
-var savegame = JSON.parse(localStorage.getItem("data"))
+var savegame = JSON.parse(localStorage.getItem("data"));
 if (savegame !== null) {
   game = savegame;
 }
@@ -129,7 +129,7 @@ if (typeof savegame.game.upgEffects[2] !== "undefined") game.upgEffects[2] = sav
 if (typeof savegame.game.upgCosts[0] !== "undefined") game.upgCosts[0] = savegame.game.upgCosts[0];
 if (typeof savegame.game.upgCosts[1] !== "undefined") game.upgCosts[1] = savegame.game.upgCosts[1];
 if (typeof savegame.game.upgCosts[2] !== "undefined") game.upgCosts[2] = savegame.game.upgCosts[2];
-
+}
 function save() { 
   localStorage.setItem("data", JSON.stringify(game));
 }
