@@ -147,10 +147,10 @@ function resetGame(){
 	game.bitMax = 32;
 	game.divisionCost = 5;
 	game.infinityPoints = 0;
-	game.produceBit: false;
-        game.produceByte: false;
-        game.upgLevels: [0,0,0];
-        game.upgEffects: [1,1,1];
+	game.produceBit= false;
+        game.produceByte= false;
+        game.upgLevels= [0,0,0];
+        game.upgEffects= [1,1,1];
         game.upgCosts= [2,2,8];
    save();
   }
