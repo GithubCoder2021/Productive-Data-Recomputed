@@ -129,6 +129,8 @@ if (typeof savegame.upgEffects[2] !== "undefined") game.upgEffects[2] = savegame
 if (typeof savegame.upgCosts[0] !== "undefined") game.upgCosts[0] = savegame.upgCosts[0];
 if (typeof savegame.upgCosts[1] !== "undefined") game.upgCosts[1] = savegame.upgCosts[1];
 if (typeof savegame.upgCosts[2] !== "undefined") game.upgCosts[2] = savegame.upgCosts[2];
+game.produceBit = false;
+game.produceByte = false;
 }
 function save() { 
   localStorage.setItem("data", JSON.stringify(game));
@@ -158,6 +160,8 @@ function resetGame(){
         game.upgCosts[0] = 2;
 	game.upgCosts[1] = 2;
 	game.upgCosts[2] = 8;
+	game.produceBit = false;
+        game.produceByte = false;
         save();
   }
 }
