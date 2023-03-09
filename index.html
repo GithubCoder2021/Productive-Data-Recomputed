@@ -9,8 +9,10 @@
 <center>
 <h1>Productive Data: Re-Computed</h1>
 <h2>Bits: <span id="bit">0/32</span></h2>
+<h3><span id="bps">1</span>/s</h3>
 <button onclick="produceBits()"><span id="bits">Produce</span></button>
 <h2>Bytes: <span id="byte">0</span></h2>
+<h3><span id="byps">0.5</span>/s</h3>
 <button onclick="produceBytes()"><span id="bytes">Produce</span></button>
 </center>
 <center>
@@ -19,15 +21,21 @@
 
 <div class="upgrade">
  <h3>Increase bit production by 50%</h3>
+ <h4>Level: <span id="level1">0</span></h4>
+ <h4>Currently: <span id="effect1">1.0</span>x</h4>
  <button onclick="buyUpg1()">Cost: <span id="upg1">2</span> Bytes</button>
 </div>
  
 <div class="upgrade">
  <h3>Increase bit capacity by 50%</h3>
+ <h4>Level: <span id="level2">0</span></h4>
+ <h4>Currently: <span id="effect2">1.0</span>x</h4>
  <button onclick="buyUpg2()">Cost: <span id="upg2">2</span> Bytes</button>
 </div>
 <div class="upgrade">
  <h3>Increase byte production by 50%</h3>
+ <h4>Level: <span id="level3">0</span></h4>
+ <h4>Currently: <span id="effect3">1.0</span>x</h4>
  <button onclick="buyUpg3()">Cost: <span id="upg3">8</span> Bytes</button>
 </div>
 </div>
