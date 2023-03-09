@@ -140,7 +140,7 @@ loadGame();
 	
 	
 function resetGame(){
- restart =confirm("Are you sure? Your data (if you have any) will be lost! This cannot be undone!");
+ restart = confirm("Are you sure? Your progress will be lost! This cannot be undone!");
  if (restart == true) {
 	game.bits = 0;
 	game.bytes = 0;
