@@ -120,15 +120,15 @@ if (typeof savegame.bps !== "undefined") game.bps = savegame.bps;
 if (typeof savegame.byps !== "undefined") game.byps = savegame.byps;
 
 if (typeof savegame.bitMax !== "undefined") game.bitMax = savegame.bitMax;
-if (typeof savegame.game.upgLevels[0] !== "undefined") game.upgLevels[0] = savegame.game.upgLevels[0];
-if (typeof savegame.game.upgLevels[1] !== "undefined") game.upgLevels[1] = savegame.game.upgLevels[1];
-if (typeof savegame.game.upgLevels[2] !== "undefined") game.upgLevels[2] = savegame.game.upgLevels[2];
-if (typeof savegame.game.upgEffects[0] !== "undefined") game.upgEffects[0] = savegame.game.upgEffects[0];
-if (typeof savegame.game.upgEffects[1] !== "undefined") game.upgEffects[1] = savegame.game.upgEffects[1];
-if (typeof savegame.game.upgEffects[2] !== "undefined") game.upgEffects[2] = savegame.game.upgEffects[2];
-if (typeof savegame.game.upgCosts[0] !== "undefined") game.upgCosts[0] = savegame.game.upgCosts[0];
-if (typeof savegame.game.upgCosts[1] !== "undefined") game.upgCosts[1] = savegame.game.upgCosts[1];
-if (typeof savegame.game.upgCosts[2] !== "undefined") game.upgCosts[2] = savegame.game.upgCosts[2];
+if (typeof savegame.upgLevels[0] !== "undefined") game.upgLevels[0] = savegame.upgLevels[0];
+if (typeof savegame.upgLevels[1] !== "undefined") game.upgLevels[1] = savegame.upgLevels[1];
+if (typeof savegame.upgLevels[2] !== "undefined") game.upgLevels[2] = savegame.upgLevels[2];
+if (typeof savegame.upgEffects[0] !== "undefined") game.upgEffects[0] = savegame.upgEffects[0];
+if (typeof savegame.upgEffects[1] !== "undefined") game.upgEffects[1] = savegame.upgEffects[1];
+if (typeof savegame.upgEffects[2] !== "undefined") game.upgEffects[2] = savegame.upgEffects[2];
+if (typeof savegame.upgCosts[0] !== "undefined") game.upgCosts[0] = savegame.upgCosts[0];
+if (typeof savegame.upgCosts[1] !== "undefined") game.upgCosts[1] = savegame.upgCosts[1];
+if (typeof savegame.upgCosts[2] !== "undefined") game.upgCosts[2] = savegame.upgCosts[2];
 }
 function save() { 
   localStorage.setItem("data", JSON.stringify(game));
