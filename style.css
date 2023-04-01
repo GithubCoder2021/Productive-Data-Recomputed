@@ -55,8 +55,29 @@ hr{
 }
 
 
+ td{
+	border: 1px solid #00FB20;
+	font-size: 1em;
+}
+
+#achievements{
+	display: none;
+}
+
+#options{
+	display: none;
+}
+
+#files{
+	display: none;
+}
+
+tr{
+	height: 75px;
+	
+	
+}
+
 #achs{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	width: 50%;
 }
