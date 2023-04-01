@@ -45,6 +45,14 @@ document.getElementById("level3").innerText = game.upgLevels[2];
 document.getElementById("effect1").innerText =game.upgEffects[0].toFixed(1);
 document.getElementById("effect2").innerText = game.upgEffects[1].toFixed(1);
 document.getElementById("effect3").innerText = game.upgEffects[2].toFixed(1);
+if (game.bytes >= 64){
+document.getElementById("fileReqFalse").style.display = "none";
+document.getElementById("fileReqTrue").style.display = "inline-block";
+}else{
+document.getElementById("fileReqFalse").style.display = "inline-block";
+document.getElementById("fileReqTrue").style.display = "none";
+}
+updateAch();
 },50);
 
 function produceBits(){
@@ -165,3 +173,18 @@ function resetGame(){
         save();
   }
 }
+
+function tab(tab) {
+  // hide all your tabs, then show the one the user selected.
+  document.getElementById("upgrades").style.display = "none";
+  document.getElementById("options").style.display = "none";
+
+document.getElementById("files").style.display = "none";
+
+document.getElementById("achievements").style.display = "none";
+
+document.getElementById(tab).style.display = "inline-block";
+}
+
+// go to a tab for the first time, so not all show
+tab("upgrades");
