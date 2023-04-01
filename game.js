@@ -187,4 +187,4 @@ document.getElementById(tab).style.display = "inline-block";
 }
 
 // go to a tab for the first time, so not all show
-tab("upgrades");
+tab('upgrades');
