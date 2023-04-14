@@ -1,0 +1,85 @@
+body{
+  background-color: black;
+  color: #00FB20;
+  font-family: monospace;
+}
+
+button{
+  background-color: black;
+  color: #00FB20;
+  border: 1px solid #00FB20;
+  padding: 8px 32px;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+.upgrades{
+  background-color: black;
+  color: #00FB20;
+  border: 1px solid #00FB20;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.upgrade{
+ background-color: black;
+  color: #00FB20;
+  border: 1px solid #00FB20;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+a:link{
+ color: white;
+}
+
+hr{
+ border: 1px solid #00FB20;
+}
+
+
+ td{
+	border: 1px solid #00FB20;
+	font-size: 1em;
+}
+
+#achievements{
+	display: none;
+}
+
+#options{
+	display: none;
+}
+
+#files{
+	display: none;
+}
+
+tr{
+	height: 75px;	
+}
+
+#achs{
+	width: 50%;
+}
+
+.file{
+	border: 1px solid #00FB20;
+}
