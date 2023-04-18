@@ -73,11 +73,13 @@ hr{
 }
 
 tr{
-	height: 75px;
-	
-	
+	height: 75px;	
 }
 
 #achs{
 	width: 50%;
+}
+
+.file{
+	border: 1px solid #00FB20;
 }

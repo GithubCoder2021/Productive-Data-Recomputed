@@ -14,6 +14,7 @@
     <li><button onclick="tab('files')">Files</button></li> 
     <li><button onclick="tab('options')">Options</button></li>
      <li><button onclick="tab('achievements')">Achievements</button></li>
+<li><button onclick="tab('stats')">Statistics</button></li>
 </div>
 <h2>Bits: <span id="bit">0/32</span></h2>
 <h3><span id="bps">1</span>/s</h3>
@@ -49,15 +50,73 @@
 </div>
 <div id="files">
   <div id="fileReqFalse">
- 	<h2>Coming soon...</h2>
+ 	<h2>Reach 24 Bytes</h2>
   </div>
   <div id="fileReqTrue">
-  <h2>Coming soon...</h2>
+  <h3>Your files are providing a <span id="fileMult">0</span>x boost to your bit and byte production</h3>
+  <h3>Injection amount: <span id="injectAmt">0</span>%</h3>
+  <hr>
+  <button onclick="setInject(0.1)">10%</button>
+  <button onclick="setInject(0.25)">25%</button>
+  <button onclick="setInject(0.333)">33.3%</button>
+  <button onclick="setInject(0.5)">50%</button>
+  <button onclick="setInject(0.75)">75%</button>
+  <button onclick="setInject(1)">100%</button>
+  <hr>
+  <div class="file">
+ 	<h3>File 1</h3>
+ 	<h4>Multiplier: x<span id="file1">0</span></h4>
+   <h4><span id="stored1">0</span> bits</h4>
+ 	<button onclick="inject1()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 2</h3>
+ 	<h4>Multiplier: x<span id="file2">0</span></h4>
+   <h4><span id="stored2">0</span> bits</h4>
+ 	<button onclick="inject2()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 3</h3>
+ 	<h4>Multiplier: x<span id="file3">0</span></h4>
+   <h4><span id="stored3">0</span> bits</h4>
+ 	<button onclick="inject3()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 4</h3>
+ 	<h4>Multiplier: x<span id="file4">0</span></h4>
+   <h4><span id="stored4">0</span> bits</h4>
+ 	<button onclick="inject4()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 5</h3>
+ 	<h4>Multiplier: x<span id="file5">0</span></h4>
+   <h4><span id="stored5">0</span> bits</h4>
+ 	<button onclick="inject5()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 6</h3>
+ 	<h4>Multiplier: x<span id="file6">0</span></h4>
+   <h4><span id="stored6">0</span> bits</h4>
+ 	<button onclick="inject6()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 7</h3>
+ 	<h4>Multiplier: x<span id="file7">0</span></h4>
+   <h4><span id="stored7">0</span> bits</h4>
+ 	<button onclick="inject7()">Inject</button>
+   </div>
+  <div class="file">
+ 	<h3>File 8</h3>
+ 	<h4>Multiplier: x<span id="file8">0</span></h4>
+   <h4><span id="stored8">0</span> bits</h4>
+ 	<button onclick="inject8()">Inject</button>
+   </div>
   </div>
 </div>
 <div id="options">
 <button onclick="save()">Save</button>
 <button onclick="resetGame()">HARD RESET!!!</button> 
+<button><a href="changelog.html">Changelog</a></button>
 </div>
 
 <div id="achievements">
@@ -73,9 +132,15 @@
 		</tr>
 	</table>
 </div>
+<div id="stats">
+	<h2>Statistics</h2>
+	<p>You played for <span id="time">0</span> while online</p>
+</div>
 </center>
 
-<script src="game.js"></script>
-<script src="ach.js"></script>
+<script src="js/game.js"></script>
+<script src="js/time.js"></script>
+<script src="js/ach.js"></script>
+<script src="js/files.js"></script>
 </body>
 </html>
