@@ -19,12 +19,12 @@ var req ={
 
 setInterval (function() {
 if (game.produceBit == true){
-  game.bits += game.bps/20;
+  game.bits += (game.bps/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
 }
 if (game.produceByte == true){
   if (game.bits > 0){
-  game.bits -= (game.byps*8)/20;
-  game.bytes += game.byps/20;
+  game.bits -= ((game.byps*8)/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
+  game.bytes += (game.byps/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
  }else {
   game.produceByte = false;
 document.getElementById("bytes").innerText = "Produce";
@@ -173,7 +173,7 @@ var game = {
 
 setInterval (function() {
 if (game.produceBit == true){
-  game.bits += (game.bps/20)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
+  game.bits += (game.bps/40);
 }
 if (game.produceByte == true){
   if (game.bits > 0){
@@ -194,8 +194,8 @@ document.getElementById("bits").innerText = "Produce";
 }
 document.getElementById("bit").innerText = Math.floor(game.bits) + "/" + Math.floor(game.bitMax);
 document.getElementById("byte").innerText = Math.floor(game.bytes);
-document.getElementById("bps").innerText = game.bps.toFixed(1);
-document.getElementById("byps").innerText = game.byps.toFixed(1);
+document.getElementById("bps").innerText = ((game.bps)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7]).toFixed(1);
+document.getElementById("byps").innerText = ((game.byps)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7]).toFixed(1);
 document.getElementById("upg1").innerText = Math.floor(game.upgCosts[0]);
 document.getElementById("upg2").innerText = Math.floor(game.upgCosts[1]);
 document.getElementById("upg3").innerText = Math.floor(game.upgCosts[2]);
@@ -311,6 +311,7 @@ if (typeof savegame.time !== "undefined") game.time = savegame.time;
 
 function save() { 
   localStorage.setItem("data", JSON.stringify(game));
+  fileSave();
 }
 	
 
@@ -341,6 +342,7 @@ function resetGame(){
         game.produceByte = false;
 	game.time = 0;
 	game.fileReq= false;
+   resetFiles();
         save();
   }
 }
@@ -366,4 +368,4 @@ setInterval (function(){
 	save();
 },15000);
 
-
+loadGame();
