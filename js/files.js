@@ -92,3 +92,33 @@ setInterval(function(){
 function setInject(amount){
 	inject = amount;
 }
+
+function fileSave(){
+	var saveFiles ={
+		mult: [mult[0],mult[1],mult[2],mult[3],mult[4],mult[5],mult[6],mult[7]],
+		stored: [stored[0],stored[1],stored[2],stored[3],stored[4],stored[5],stored[6],stored[7]]
+	};
+	localStorage.setItem("files",JSON.stringify(saveFiles));
+	
+}
+function loadFiles(){
+	var fileLoad = JSON.parse(localStorage.getItem("files"));
+	if (typeof fileLoad.mult[0] !== "undefined") mult[0] = fileLoad.mult[0];
+	if (typeof fileLoad.mult[1] !== "undefined") mult[1] = fileLoad.mult[1];
+	if (typeof fileLoad.mult[2] !== "undefined") mult[2] = fileLoad.mult[2];
+	if (typeof fileLoad.mult[3] !== "undefined") mult[3] = fileLoad.mult[3];
+	if (typeof fileLoad.mult[4] !== "undefined") mult[4] = fileLoad.mult[4];
+	if (typeof fileLoad.mult[5] !== "undefined") mult[5] = fileLoad.mult[5];
+	if (typeof fileLoad.mult[6] !== "undefined") mult[6] = fileLoad.mult[6];
+	if (typeof fileLoad.mult[7] !== "undefined") mult[7] = fileLoad.mult[7];
+	if (typeof fileLoad.stored[0] !== "undefined") stored[0] = fileLoad.stored[0];
+	if (typeof fileLoad.stored[1] !== "undefined") stored[1] = fileLoad.stored[1];
+	if (typeof fileLoad.stored[2] !== "undefined") stored[2] = fileLoad.stored[2];
+	if (typeof fileLoad.stored[3] !== "undefined") stored[3] = fileLoad.stored[3];
+	if (typeof fileLoad.stored[4] !== "undefined") stored[4] = fileLoad.stored[4];
+	if (typeof fileLoad.stored[5] !== "undefined") stored[5] = fileLoad.stored[5];
+	if (typeof fileLoad.stored[6] !== "undefined") stored[6] = fileLoad.stored[6];
+	if (typeof fileLoad.stored[7] !== "undefined") stored[7] = fileLoad.stored[7];
+}
+
+loadFiles();
