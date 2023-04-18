@@ -122,3 +122,8 @@ function loadFiles(){
 }
 
 loadFiles();
+
+function resetFiles(){
+ mult = [1,1,1,1,1,1,1,1];
+ stored = [0,0,0,0,0,0,0,0];
+}
