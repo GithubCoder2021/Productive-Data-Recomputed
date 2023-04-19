@@ -19,12 +19,12 @@ var req ={
 
 setInterval (function() {
 if (game.produceBit == true){
-  game.bits += (game.bps/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
+  game.bits += (game.bps/20)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
 }
 if (game.produceByte == true){
   if (game.bits > 0){
-  game.bits -= ((game.byps*8)/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
-  game.bytes += (game.byps/40)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
+  game.bits -= ((game.byps*8)/20)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
+  game.bytes += (game.byps/20)*mult[0]*mult[1]*mult[2]*mult[3]*mult[4]*mult[5]*mult[6]*mult[7];
  }else {
   game.produceByte = false;
 document.getElementById("bytes").innerText = "Produce";
