@@ -62,7 +62,7 @@ function inject7() {
 function inject8() {
 	stored[7] += game.bits * inject;
 	game.bits -= game.bits * inject;
-	mult[7] = Math.log1p(stored[7])/5+ 1;
+	mult[7] = Math.log10(stored[7])/5+ 1;
 	if (mult[7] < 1){
 		mult[7] = 1;
 	}
