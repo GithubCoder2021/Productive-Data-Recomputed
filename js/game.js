@@ -157,7 +157,7 @@ function save() {
 	
 var game = {
   bits: 0,
-  bytes: 24,
+  bytes: 0,
   bitMax: 32,
   bps: 1,
   byps: 0.5,
